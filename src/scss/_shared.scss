@@ -1,0 +1,29 @@
+// variables
+
+$font-color-1: #666;
+$font-color-2: #009;
+$font-color-3: #006;
+
+$color-1: #eee;
+$color-2: #aaa;
+
+$retina: 1.5;
+
+// mixins
+
+@mixin retina-inline-asset($name, $ext: 'png') {
+    $image: 'assets/images/' + $name + '.' + $ext;
+    $image-retina: 'assets/images/' + $name + '_2x.' + $ext;
+
+    display: block;
+    width: width($image);
+    height: height($image);
+    background-repeat: no-repeat;
+    background-size: size($image);
+
+    @if $assets-retina {
+        background-image: inline($image-retina);
+    } @else {
+        background-image: inline($image);
+    }
+}
