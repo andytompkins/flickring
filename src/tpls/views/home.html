@@ -1,2 +1,10 @@
-Home page<br><br>
-<div class="asset-img-1"></div>
+<br><br>
+<div>
+  <ul>
+    <li ng-repeat="i in images track by $index">
+      <p>{{i.alt}}</p>
+      <img src={{i.url}} alt={{i.alt}}>
+      
+    </li>
+  </ul>
+</div>
