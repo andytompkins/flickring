@@ -4,6 +4,7 @@ import ngSanitize from 'angular-sanitize';
 import uiRouter from 'angular-ui-router';
 import mAnimations from './animations/_loader';
 import mCtrls from './controllers/_loader';
+import './modules/angular-deckgrid.js';
 
 /*
 import mDirectives from './directives/_loader';
@@ -13,7 +14,7 @@ import mServices from './services/_loader';
 /**
  * Register main angular app
  */
-angular.module('mApp', [ngTouch, ngSanitize, uiRouter, mAnimations, mCtrls])
+angular.module('mApp', [ngTouch, ngSanitize, uiRouter, mAnimations, mCtrls, 'akoenig.deckgrid'])
     .config(function ($stateProvider, $locationProvider, $urlRouterProvider) {
         'ngInject';
 

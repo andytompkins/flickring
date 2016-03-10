@@ -1,10 +1,39 @@
 <br><br>
 <div>
+  <div>
+    <span ng-click="clickLeft($event)" class="chevron left"></span>
+    <div>
+      <span>{{ appData[current].CustomerName }}</span>
+      <span>{{ appData[current].eMailAddress }}</span>
+    </div>
+    <div>
+      <span>{{ appData[current].CustomerID }}</span>
+    </div>
+    <div>
+      <span>{{ appData[current].PrimaryAddress.CITY }}, {{ appData[current].PrimaryAddress.STATE }}</span>
+    </div>
+    <span ng-click="clickRight($event)" class="chevron right"></span>
+  </div>
+  
+  <div deckgrid source="images" class="deckgrid">
+    <div class="photo">
+      <div class="photo-wrapper">
+        <img src="" ng-src={{card.src}}>
+      </div>
+      <div class="photo-description">
+        <h3>{{card.title}}</h3>
+      </div>
+    </div>
+  </div>
+  
+  <!-- 
   <ul>
     <li ng-repeat="i in images track by $index">
       <p>{{i.alt}}</p>
-      <img src={{i.url}} alt={{i.alt}}>
+      <img ng-src={{i.url}} alt={{i.alt}}>
       
     </li>
   </ul>
+   -->
+   
 </div>

@@ -3,7 +3,8 @@ html {
 }
 
 body {
-    color: $font-color-1;
+  background-color: #373737;
+    color: $font-color-0;
     font-family: Arial, Helvetica, sans-serif;
     // font-size: 62.5%; // 1em = 10px
 }
@@ -20,6 +21,17 @@ a:hover {
 
 canvas {
     display: block;
+}
+
+img {
+    height:auto;
+    max-width:100%;
+}
+
+h1, h2, h3, h4 {
+    font-weight:100;
+    margin:0;
+    padding:0;
 }
 
 // scss-lint:disable ImportantRule, SingleLinePerSelector, SelectorFormat
