@@ -309,6 +309,11 @@ gulp.task('_modernizr-build', ['_modernizr-generate'], function () {
         .pipe(gulp.dest(BUILD_DIR + '/scripts/'));
 });
 
+gulp.task('_copylibs', function() {
+    return gulp.src('node_modules/flickrapi/browser/flickrapi.js')
+        .pipe(gulp.dest(BUILD_DIR + '/scripts/'));
+});
+
 // Copy templates
 gulp.task('_tpls-build', function () {
     return gulp.src('src/tpls/**/*.html')
@@ -369,7 +374,7 @@ gulp.task('_js-lint', function () {
  */
 
 gulp.task('_build', ['_css-build', '_css-vendor-build', '_tpls-build', '_modernizr-build',
-'_root-files-build', '_data-build'], function () {
+'_copylibs', '_root-files-build', '_data-build'], function () {
     notifier.notify({
         title: 'Gulp notification',
         message: 'Build completed.',
