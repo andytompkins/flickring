@@ -310,7 +310,7 @@ gulp.task('_modernizr-build', ['_modernizr-generate'], function () {
 });
 
 gulp.task('_copylibs', function() {
-    return gulp.src('node_modules/flickrapi/browser/flickrapi.js')
+    return gulp.src(['node_modules/flickrapi/browser/flickrapi.js'])
         .pipe(gulp.dest(BUILD_DIR + '/scripts/'));
 });
 
