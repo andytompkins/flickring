@@ -1,18 +1,15 @@
 <br><br>
-<div>
-  <div>
-    <span ng-click="clickLeft($event)" class="chevron left"></span>
-    <div>
-      <span>{{ appData[current].CustomerName }}</span>
-      <span>{{ appData[current].eMailAddress }}</span>
-    </div>
-    <div>
-      <span>{{ appData[current].CustomerID }}</span>
-    </div>
-    <div>
-      <span>{{ appData[current].PrimaryAddress.CITY }}, {{ appData[current].PrimaryAddress.STATE }}</span>
-    </div>
-    <span ng-click="clickRight($event)" class="chevron right"></span>
+<div class="home">
+  <div class="userinfo">
+    <span ng-click="clickLeft($event)" class="chevron left inline scroll"></span>
+    <ul class="userlist inline">
+      <li><span class="user">Customer: {{ appData[current].CustomerName }}</span></li>
+    
+      <li><span class="user">Customer ID: {{ appData[current].CustomerID }}</span></li>
+    
+      <li><span class="user">Location: {{ appData[current].PrimaryAddress.CITY }}, {{ appData[current].PrimaryAddress.STATE }}</span></li>
+    </ul>
+    <span ng-click="clickRight($event)" class="chevron right inline scroll"></span>
   </div>
   
   <div deckgrid source="images" class="deckgrid">

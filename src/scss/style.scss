@@ -11,6 +11,33 @@
 @import 'modules/version';
 
 
+.home {
+  width: 100%;
+}
+
+.userinfo {
+  width: 600px;
+  margin: auto;
+}
+
+.inline {
+  display: inline-block;
+}
+
+.scroll {
+  padding: 6px;
+  position: relative;
+  top: -20px;
+}
+
+.user {
+}
+
+.userlist {
+  padding-right: 34px;
+  list-style-type: none;
+}
+
 .chevron::before {
 	border-style: solid;
 	border-width: 0.25em 0.25em 0 0;
@@ -57,7 +84,6 @@
 
 .photo {
     $spinner: 'assets/images/spinner.gif';
-    /* background-image: ; */
     background:#fff inline($spinner) center 30px no-repeat;
     border:1px solid rgba(0, 0, 0, .15);
     border-radius:3px;
@@ -89,8 +115,8 @@
     width: 200px;
 }
 
-
 .deckgrid {
+    color: #000;
     margin:100px auto;
     padding:10px;
     width:1500px;
@@ -127,9 +153,9 @@
 }
 
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1024px) {
     .deckgrid {
-        width:800px;
+        width:900px;
     }
 
     .deckgrid[deckgrid]::before {
@@ -139,7 +165,7 @@
 
 @media screen and (max-width: 840px) {
     .deckgrid {
-        width:760px;
+        width:800px;
     }
 
     .deckgrid[deckgrid]::before {
@@ -151,7 +177,7 @@
 @media screen and (min-width: 481px) and (max-width: 768px) {
     .deckgrid {
         margin:100px auto;
-        width:500px;
+        width:600px;
     }
 
     .deckgrid[deckgrid]::before {
